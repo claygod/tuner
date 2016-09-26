@@ -1,6 +1,9 @@
 # Tuner
 The loader in Go ini files with simultaneous support for environment variables and command line.
 
+[![API documentation](https://godoc.org/github.com/claygod/tuner?status.svg)](https://godoc.org/github.com/claygod/tuner)
+[![Go Report Card](https://goreportcard.com/badge/github.com/claygod/tuner)](https://goreportcard.com/report/github.com/claygod/tuner)
+
 The tuner is designed for easy configuration of the application.
 The parameters it takes from (in decreasing order of priority):
 - Command Line
