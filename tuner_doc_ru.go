@@ -1,6 +1,9 @@
+package tuner
+
 // Tuner
 // Documentation RU
-//
+// Copyright © 2016 Eduard Sesigin. All rights reserved. Contacts: <claygod@yandex.ru>
+
 /*
 Тюнер предназначен для удобного конфигурирования приложения.
 Параметры он берёт из (в порядке уменьшения приоритета):
@@ -56,6 +59,3 @@ path := tun.Section("Main").Get("path").(string)
 	}
 
 */
-// Copyright © 2016 Eduard Sesigin. All rights reserved. Contacts: <claygod@yandex.ru>
-// Package tuner
-package tuner
