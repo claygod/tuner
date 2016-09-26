@@ -1,4 +1,4 @@
-// Package tuner
+// Tuner
 // Documentation RU
 //
 /*
@@ -57,4 +57,5 @@ path := tun.Section("Main").Get("path").(string)
 
 */
 // Copyright © 2016 Eduard Sesigin. All rights reserved. Contacts: <claygod@yandex.ru>
+// Package tuner
 package tuner
