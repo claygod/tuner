@@ -16,9 +16,13 @@ import (
 	"strings"
 )
 
-// DELIMITER_COMMAND - a symbol that is used to bind the section name and key name
+// DELIMITER_COMMAND - is used to bind the section name and key name
 const DELIMITER_COMMAND string = "_"
+
+// DELIMITER_PARAM - is used to separate key and value
 const DELIMITER_PARAM string = "="
+
+// DELIMITER_SLICE - is used to separate components of the List
 const DELIMITER_SLICE string = ","
 
 // setup - Download and configuration file handling, as well as obtaining
@@ -66,18 +70,17 @@ func (my *Tuner) setup(path string) error {
 			if e := os.Getenv(cKey); e != "" {
 				if res, err := my.setTypeEnvPar(e, v, cKey); err != nil {
 					return err
-				} else {
-					my.params[section][k] = res
 				}
+				my.params[section][k] = res
+
 			}
 			// command line
 			if v2, ok := my.args[cKey]; ok {
 				res, err := my.parseValue(v2)
 				if err != nil {
 					return err
-				} else {
-					my.params[section][k] = res
 				}
+				my.params[section][k] = res
 			}
 		}
 	}
