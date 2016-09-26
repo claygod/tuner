@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-func (this *Tuner) commandLineParser() {
+func (my *Tuner) commandLineParser() {
 	var arg []string
 	arg = os.Args
 	for i := len(arg) - 1; i > 0; i-- {
@@ -18,18 +18,18 @@ func (this *Tuner) commandLineParser() {
 		twoSide := strings.Split(arg[i], DELIMITER_PARAM)
 		key := twoSide[0]
 		value := strings.Replace(arg[i], key+DELIMITER_PARAM, "", 1)
-		this.args[key] = value
+		my.args[key] = value
 	}
 }
 
-func (this *Tuner) delComment(str string) string {
+func (my *Tuner) delComment(str string) string {
 	wos := strings.Split(str, "#")
 	out := strings.TrimSpace(wos[0])
 	out = strings.TrimSpace(out)
 	return out
 }
 
-func (this *Tuner) cleanSection(str string, left string, right string) string {
+func (my *Tuner) cleanSection(str string, left string, right string) string {
 	str = strings.TrimSpace(str)
 	str = strings.TrimLeft(str, left)
 	str = strings.TrimRight(str, right)
