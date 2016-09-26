@@ -68,7 +68,8 @@ func (my *Tuner) setup(path string) error {
 			my.params[section][k] = v
 			// environment
 			if e := os.Getenv(cKey); e != "" {
-				if res, err := my.setTypeEnvPar(e, v, cKey); err != nil {
+				res, err := my.setTypeEnvPar(e, v, cKey)
+				if err != nil {
 					return err
 				}
 				my.params[section][k] = res
