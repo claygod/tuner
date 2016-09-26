@@ -47,11 +47,12 @@ In the environment variables, and command-line switch variable must be specified
 
 ### Example
 For the section of Main set value for the path variable must be so: `Main_path`. Command line at the same time could look in Windows as follows:
-`Tuner.exe -Main_path =" config.ini "-Second_mas = (6,7," abc "," efj ", 3.14)`
+`Tuner.exe -Main_path ="config.ini" -Second_mas = (6,7,"abc","efj", 3.14)`
+Note that string variables are quoted!
 
 ### Getting the value
 When a value is first necessary to use the method `Section` and then the method of` Get`. The resulting value should lead to the desired type. Lists return a list of interfaces in the list and you will also need to give value to the desired type.
-`Path: = tun.Section (" Main ") Get (" path ") (string)`..
+`Path: = tun.Section("Main").Get("path").(string)`
 
 # Changing the value
 If necessary, you can change the value of the configuration parameter, the contents of the configuration file is not changed:
