@@ -17,7 +17,7 @@ Example
 		panic(err)
 	}
 	path := tun.Section("Main").Get("path").(string)
-	lenght := tun.Section("Main").Get("lenght").(float64)
+	length := tun.Section("Main").Get("length").(float64)
 	mas := tun.Section("Main").Get("mas").([]interface{})
 	first := mas[0].(int)
  ```
