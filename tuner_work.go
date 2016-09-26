@@ -16,6 +16,7 @@ import (
 	"strings"
 )
 
+// DELIMITER_COMMAND - a symbol that is used to bind the section name and key name
 const DELIMITER_COMMAND string = "_"
 const DELIMITER_PARAM string = "="
 const DELIMITER_SLICE string = ","
