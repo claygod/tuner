@@ -65,14 +65,6 @@ func TestOnlyGet(t *testing.T) {
 	}
 }
 
-func TestChangeValue(t *testing.T) {
-	tnr, err := New("config.ini")
-	y := tnr.Section("Main").Set("path", "now.ini")
-	if x := tnr.Section("Main").Get("path"); y != nil || x != "now.ini" {
-		t.Error("Error get change key `path`: ", x, " !! ", err)
-	}
-}
-
 func TestList(t *testing.T) {
 	tnr, _ := New("config.ini")
 	m := tnr.Section("Main").Get("mas").([]interface{})
