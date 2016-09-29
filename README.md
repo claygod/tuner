@@ -53,17 +53,6 @@ Note that string variables are quoted!
 ### Getting the value
 When a value is first necessary to use the method `Section` and then the method of` Get`. The resulting value should lead to the desired type. Lists return a list of interfaces in the list and you will also need to give value to the desired type.
 `Path: = tun.Section("Main").Get("path").(string)`
-
-# Changing the value
-If necessary, you can change the value of the configuration parameter, the contents of the configuration file is not changed:
-
-```Go
-	tnr, err := New("config.ini")
-	y := tnr.Section("Main").Set("path", "now.ini")
-	if x := tnr.Section("Main").Get("path"); y != nil || x != "now.ini" {
-		fmt.Print("Error in key `path`: ", x, "! ", err)
-	}
-  ```
   
 
 
