@@ -27,19 +27,19 @@ Example
  
  The configuration file is a usual ini-file, which supports strings, integers, floats and lists.
  
-# Comments
+### Comments
 Comments are denoted by the symbol `#`. All that follows this symbol in the line is a comment.
 
-# Srtings
+### Srtings
 Strings are enclosed in single or double quotes. Embedded quotation marks must be distinguished from the exterior.
 
-# Integers
+### Integers
 Variable, consisting only of numbers is treated as a whole int. An integer can not be more than 2147483648
 
-# Floats
+### Floats
 Chance of numbers containing the point (not a comma!) Treated as `float64`
 
-# Lists
+### Lists
 Lists may contain both types of strings and numbers. Nested lists are not supported. Lists are enclosed in single or braces. list of members separated by commas.
 
 # The principle of the formation of the key
